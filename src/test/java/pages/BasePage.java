@@ -21,6 +21,11 @@ public class BasePage {
         options.setHeadless(true);
         driver = new ChromeDriver(options);
         driver.get("https://automationstepbystep.com/");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void closeBrowser() {
