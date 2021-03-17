@@ -22,7 +22,7 @@ public class BasePage {
         driver = new ChromeDriver(options);
         driver.get("https://automationstepbystep.com/");
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
