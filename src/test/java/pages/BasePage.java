@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.logging.Level;
 
@@ -16,9 +15,8 @@ public class BasePage {
         // getting rid of the logging msg
         System.setProperty("webdriver.chrome.silentOutput", "true");
         java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
-        ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        driver = new ChromeDriver(options);
+
+        driver = new ChromeDriver();
         driver.get("https://automationstepbystep.com/");
     }
 
