@@ -14,7 +14,7 @@ public class LoginStep {
         (new LoginPage()).goToSite();
     }
 
-    @When("^I try to log in using username \"([^\"]*)\" and password \"([^\"]*)\"$")
+    @When("^I log in using username \"([^\"]*)\" and password \"([^\"]*)\"$")
     public void iTryToLogInUsingUsernameAndPassword(String username, String password){
         (new NavBar()).navigateToLogIn();
         (new LoginPage()).login(username, password);
