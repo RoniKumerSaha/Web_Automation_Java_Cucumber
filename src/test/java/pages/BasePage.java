@@ -20,12 +20,22 @@ public class BasePage {
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(false);
         driver = new ChromeDriver(options);
-        driver.get("https://automationstepbystep.com/");
+    }
 
+    public void goToSite(){
+        driver.get("https://www.demoblaze.com/");
     }
 
     public void closeBrowser() {
         if (driver != null)
             driver.quit();
+    }
+
+    public void waitFor(int second){
+        try {
+            Thread.sleep(second * (100 * 10));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
