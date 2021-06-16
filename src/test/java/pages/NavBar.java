@@ -15,6 +15,9 @@ public class NavBar extends BasePage{
     @FindBy( id = "nameofuser")
     WebElement profileName;
 
+    @FindBy(xpath = "//a[contains(text(),'Cart')]")
+    WebElement cart;
+
 
     public NavBar() {
         initElements(driver, this);
@@ -32,6 +35,11 @@ public class NavBar extends BasePage{
     public void navigateToContact(){
         this.contactBtn.click();
         waitFor(3);
+    }
+
+    public void navigateToCart(){
+        this.cart.click();
+        waitFor(5);
     }
 
 }
