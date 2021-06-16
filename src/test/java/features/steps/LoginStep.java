@@ -1,7 +1,9 @@
 package features.steps;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
+import org.junit.Assert;
 import pages.LoginPage;
 import pages.NavBar;
 
@@ -18,7 +20,8 @@ public class LoginStep {
         (new LoginPage()).login(username, password);
     }
 
-    @Then("^I should be able to login successfully$")
-    public void iShouldBeAbleToLoginSuccessfully() {
+    @Then("^I should be able to login successfully and see username \"([^\"]*)\"$")
+    public void iShouldBeAbleToLoginSuccessfullyAndSeeUsername(String username){
+        Assert.assertTrue(new NavBar().getUserName().contains(username));
     }
 }

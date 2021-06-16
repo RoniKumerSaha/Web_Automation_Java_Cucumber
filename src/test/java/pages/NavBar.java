@@ -12,13 +12,25 @@ public class NavBar extends BasePage{
     @FindBy(xpath = "//a[contains(text(),'Log in')]")
     WebElement loginBtn;
 
+    @FindBy( id = "nameofuser")
+    WebElement profileName;
+
 
     public NavBar() {
         initElements(driver, this);
     }
 
+    public String getUserName(){
+        return this.profileName.getText();
+    }
+
     public void navigateToLogIn(){
         this.loginBtn.click();
+        waitFor(3);
+    }
+
+    public void navigateToContact(){
+        this.contactBtn.click();
         waitFor(3);
     }
 

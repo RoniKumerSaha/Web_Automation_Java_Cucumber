@@ -31,6 +31,10 @@ public class BasePage {
             driver.quit();
     }
 
+    public String getAlertText(){
+      return driver.switchTo().alert().getText();
+    }
+
     public void waitFor(int second){
         try {
             Thread.sleep(second * (100 * 10));
