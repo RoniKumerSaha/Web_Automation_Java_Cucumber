@@ -1,11 +1,10 @@
-package features.steps;
+package ui.steps;
 
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
 import org.junit.Assert;
-import pages.LoginPage;
-import pages.NavBar;
+import ui.pages.LoginPage;
+import ui.pages.NavBar;
 
 public class LoginStep {
 

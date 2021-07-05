@@ -1,9 +1,9 @@
-package features.steps;
+package ui.steps;
 
 import cucumber.api.java.en.*;
 import org.junit.Assert;
-import pages.ContactPage;
-import pages.NavBar;
+import ui.pages.ContactPage;
+import ui.pages.NavBar;
 
 public class ContactStep {
 

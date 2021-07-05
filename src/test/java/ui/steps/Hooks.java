@@ -1,7 +1,7 @@
-package features.steps;
+package ui.steps;
 
 import cucumber.api.java.*;
-import pages.BasePage;
+import ui.pages.BasePage;
 
 public class Hooks extends BasePage {
     @Before

@@ -1,3 +1,4 @@
 .idea/
 /target
 Web_Automation_Java_Cucumber.iml
+logs/Test-log.log

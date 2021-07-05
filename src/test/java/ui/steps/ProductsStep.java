@@ -1,9 +1,9 @@
-package features.steps;
+package ui.steps;
 
 import cucumber.api.java.en.*;
 import org.junit.Assert;
-import pages.NavBar;
-import pages.ProductsPage;
+import ui.pages.NavBar;
+import ui.pages.ProductsPage;
 
 public class ProductsStep {
 
