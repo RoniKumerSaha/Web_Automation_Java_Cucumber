@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class ContactPage extends BasePage{
+    @FindBy(id = "exampleModalLabel")
+    WebElement newMessagePopUp;
+
     @FindBy(id = "recipient-email")
     WebElement email;
 
@@ -30,5 +33,9 @@ public class ContactPage extends BasePage{
         this.message.sendKeys(faker.lorem().sentence());
         this.submit.click();
         waitFor(3);
+    }
+
+    public Boolean isPopUpVisible(){
+        return this.newMessagePopUp.isDisplayed();
     }
 }

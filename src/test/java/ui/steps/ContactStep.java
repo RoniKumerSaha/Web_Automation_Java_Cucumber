@@ -21,4 +21,14 @@ public class ContactStep {
     public void iShouldBeSubmittedSuccessfully() {
         Assert.assertTrue((new ContactPage().getAlertText().contains("Thanks for the message")));
     }
+
+    @When("^I click Contact button$")
+    public void iClickContactButton() {
+        new NavBar().navigateToContact();
+    }
+
+    @Then("^I should be on Contact page$")
+    public void iShouldBeOnContactPage() {
+        Assert.assertTrue(new ContactPage().isPopUpVisible());
+    }
 }

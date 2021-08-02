@@ -24,7 +24,7 @@ public class BasePage {
         java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(false);
+        options.setHeadless(true);
         driver = new ChromeDriver(options);
         driver = setEventListener(driver);
         logger.info("Chrome driver Started");
